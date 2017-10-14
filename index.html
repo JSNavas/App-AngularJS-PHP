@@ -1,0 +1,163 @@
+<!-- index.html -->  
+<html lang="es" ng-app='app'>  
+    <head>  
+        <meta charset="utf-8">
+        <title>AppTester</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
+       <!--  <script src="load-scripts.js" type="text/javascript" async="async"></script> -->
+
+        <!-- estilos -->
+        <link rel="stylesheet" href="styles/estilos.css">
+        <link rel="stylesheet" href="styles/AdminLTE.min.css">
+        <link rel="stylesheet" href="styles/home-style.css">
+<!--         <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+        <link rel="stylesheet" href="styles/nprogress-style.css"> -->
+        <link rel="stylesheet" href="styles/preloader.css">
+        <link rel="stylesheet" href="pace-theme-flash.css">
+
+		<script src="pace.min.js"></script>
+		<script src="preloadjs-0.1.0.min.js"></script>
+
+        <script src="lib/angularjs/angular-1.5.8/angular.min.js"></script>
+        <script src="lib/angularjs/angular-1.5.8/angular-route.min.js"></script>
+        <script src="lib/angularjs/angular-1.5.8/angular-cookies.min.js"></script>
+
+        <!-- librerias -->
+        <script src="lib/jquery/jquery.min.js"></script>
+        <script src="lib/nprogress/nprogress.js"></script>
+<!--         <script>
+            $.ajaxPrefilter(function( options, originalOptions, jqXHR ) { options.async = true; });
+        </script> -->
+
+        <!-- scripts -->
+        <script src="scripts/search.js"></script>
+        <script src="scripts/scroll.js"></script>
+
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    </head>  
+    
+    <body ng-controller='appCtrl'>
+
+    <div id="preloader">
+        <div id="contenido"></div>
+        <div id="loader" class="circle-icon"></div>
+        <h3 id="texto"> Cargando...</h3>
+    </div>
+
+        <div id="page">
+            <!-- HEADER INDEX -->
+            <header id="header" class="hide" ng-controller="indexCtrl">
+              <nav class="navbar header-index navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/"><i class="fa fa-paper-plane"></i> AppTester</a>
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#/about">ABOUT</a></li>
+                      <li><a href="#/services">SERVICES</a></li>
+                      <li><a href="#/team">TEAM</a></li>
+                      <li><a href="#/contact">CONTACT</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </header>
+            
+            <!-- HEADER HOME -->
+            <!-- navbar-fixed-top -->
+            <header id="header-home" class="hide" ng-controller="homeCtrl">
+                <nav class="navbar header-home navbar-default navbar-fixed-top">
+                    <div class="container-fluid">
+                        
+                        <!-- BOTONES A LA IZQUIERDA -->
+                        <div class="container-fluid">
+                            <div class="navbar-header"> 
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+                                    <span class="sr-only">Menu</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+            
+                                <a href="#/home" id="logo" class="navbar-brand">AppTester</a>
+                            </div>
+            
+                            <div class="collapse navbar-collapse" id="navbar-1">
+                                <ul class="nav navbar-nav">  
+                                    <li class="menu"><a href="#/">Inicio</a></li>
+                                    <li class="menu"><a href="#/perfil">Perfil</a></li>
+            
+                                <!-- BOTON BUSCAR -->
+                                    <li><a style="cursor:pointer;" onclick="buscar();">Buscar</a></li>
+            
+                                </ul>
+            
+                                <!-- CAJA BUSCAR -->
+                                <form action="" id="caja-buscar" style="" class="navbar-form navbar-left" role="search">
+                                    <div class="form-group">
+                                        <span class="sr-only">Buscar</span>
+                                        <input type="text" class="form-control" placeholder="Buscar grupo" autofocus="">
+                                        <button class="btn btn-primary" type="button"><span style="width: 20px; height: 20px; text-align: center; padding: 3px;" class="glyphicon glyphicon-search"></span></button>
+                                    </div>
+                                </form>
+            
+            
+                                <!-- BOTONES A LA DERECHA -->
+            
+                                <ul class="nav navbar-nav navbar-right">
+            
+                                    <li>
+                                        <a href="#/chat">Chat</a>
+                                    </li>
+            
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                            {{usrConectado.user}} <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#/configuracion">Configuracion</a></li>
+                                            <li><a href="#/ayuda">Ayuda</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="" ng-click='cerrarSesion();'>Cerrar Session</a></li>
+                                         
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            
+            <div id="view" ng-view></div>
+            
+            <!-- Scroll Top -->
+            <div class="scroll-top">
+                <a><i class="fa fa-angle-up"></i></a>
+            </div>
+
+        </div>
+
+        <!-- main -->
+        <script src="app.js"></script>
+
+        <!-- controladores -->
+        <script src="controllers/appCtrl.js"></script>
+        <script src="controllers/indexCtrl.js"></script>
+        <script src="controllers/loginCtrl.js"></script>
+        <script src="controllers/signupCtrl.js"></script>
+        <script src="controllers/activateCtrl.js"></script>
+        <script src="controllers/onboardingCtrl.js"></script>
+        <script src="controllers/homeCtrl.js"></script>
+        <script src="controllers/chatCtrl.js"></script>
+
+    </body>
+</html>

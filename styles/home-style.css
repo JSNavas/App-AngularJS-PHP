@@ -1,0 +1,84 @@
+body {
+  min-height: 75rem; /* Can be removed; just added for demo purposes */
+  padding-bottom: 0px;
+  background-color: #E4E4E4;  
+}
+
+
+/*-------------------------------jumbotron----------------------------------*/
+.homeJumb {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+/*-------------------------------header----------------------------------*/
+#logo {
+  color: #777 !important;
+}
+
+#header-home{
+  padding-top: 65px;
+}
+
+/*--------------eliminar el espacio entre las cajas del home----------------*/
+
+.centro{
+    padding-left: 0px !important; 
+    padding-right: 0px !important; 
+}
+
+@media screen and (max-width:770px) {
+  .centro { 
+    padding-left: 15px !important; 
+      padding-right: 15px !important;  
+    }
+
+}
+
+/*-----------------------------cajas del home---------------------------*/
+
+.box{
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+#box-perfil{
+  max-height: 135px;
+}
+
+#portada{
+  position: relative;
+  margin-bottom: 0px;
+}
+
+#avatar{
+  position: relative;
+  bottom: 50px;
+  margin: 0 auto;
+
+}
+
+#nombre{
+  text-align: center;
+  position: relative;
+  bottom: 50px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#user{
+  text-align: center;
+  position: relative;
+  bottom: 60px;
+  font-size: 15px;
+}
+
+#bio{
+  text-align: center;
+  position: relative;
+  bottom: 60px;
+}
+
+
+

@@ -1,0 +1,21 @@
+<div class="jumbotron activatejumb text-center" ng-controller="activateCtrl">  
+	
+	<h1>Activa tu Cuenta!!</h1> 
+
+	<p>Tu cuenta ha sido creada, ahora solo necesitas activar tu cuenta colocando el codigo que te hemos enviado a <a href=""><strong style="color: #009688;">{{ usrRegistrado.email }}</strong></a></p>
+
+
+	<form class="form-signin" >
+		<div class="form-group">
+		  <label for="Codigo de verificacion">Codigo de verificacion</label>
+		  <input style="text-align: center;" type="text" ng-model="codigo" id="codigo" class="form-control" placeholder="Codigo de verificacion" maxlength="20" required autofocus>
+		</div>
+		<div class="form-group">
+			<button ng-click="activar();" class="btn btn-lg btn-primary btn-block">Activar</button>
+			<button ng-click="reenviarCodigo();" class="btn btn-md btn-danger btn-block">No recibi el codigo</button>
+		</div>
+<!-- 		<div class="form-group">
+			<div id="mensaje" class='alert alert-success' role='alert'><span class='glyphicon glyphicon-ok-circle' style='font-size:21px; top:4px;'></span> Se ha reenviado el codigo a tu correo!</div>
+		</div> -->
+	</form>	
+</div>

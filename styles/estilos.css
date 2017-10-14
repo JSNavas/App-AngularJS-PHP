@@ -1,0 +1,314 @@
+body {
+    font: sans-serif;
+    background-color: #eee;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/*-------------------------------formulario----------------------------------*/
+
+.as{
+    color: red;
+    float: right;
+    position: relative;
+    left: 2px;
+    margin: 0 auto;
+  }
+
+ #resultado{
+    text-align: center;
+    padding: 0px;
+  }
+
+ #resultado2{
+    text-align: center;
+    padding: 0px;
+
+  }
+
+  #mensaje{
+     text-align: center;
+     padding: 0px;
+   }
+
+  h2{
+    text-align: center;
+  }
+
+  .form-signin {
+    max-width: 300px;
+    padding: 0px;
+    margin: 0 auto;
+  }
+  
+  .form-signin .form-signin-heading,
+  .form-signin .checkbox {
+    margin-bottom: 10px;
+  }
+  .form-signin .checkbox {
+    font-weight: normal;
+  }
+  .form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+/*-------------------------------jumbotron----------------------------------*/
+.indexJumb {
+    background: url('../img/banner.jpg') no-repeat fixed center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 180px 0 140px;
+    font-family: sans-serif;
+}
+
+.activateJumb{
+  background: url('../img/banner.jpg') no-repeat fixed center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 100px 100px 125px;
+  font-family: sans-serif;
+}
+
+@media screen (min-width: 0px) and (max-width: 768px) {
+  .jumbotron {
+       padding: 120px 0 130px;
+  }
+}
+
+/*--------------------------banner del jumbotron---------------------------*/
+.banner-info {
+    font: 400 15px sans-serif;
+}
+
+.banner-info h1{
+    font-weight: 700;
+    font-size: 3.5em;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 70%;
+    display: inline-block;
+}
+.banner-info span{
+    width:15%;
+    height:1px;
+    background:#35C2F8;
+    display:inline-block;
+}
+.banner-info p{
+    color: #CCCCCC;
+    font-weight:400;
+    font-size: 1.3em;
+    line-height: 1.7em;
+    font-family: sans-serif;
+    margin: 1em auto;
+    width: 50%;
+}
+
+
+@media (max-width:1024px){
+    .container{
+        width:80%;
+    }
+
+    .banner-info h1 {
+        font-size: 3.2em;
+        width: 80%;
+    }
+    .banner-info p {
+        width: 60%;
+    }
+}
+@media (max-width:768px){
+    .container{
+        width:80%;
+    }
+    .banner-info h1 {
+        font-size: 2.8em;
+        width: 100%;
+    }
+    .banner-info p {
+        width: 90%;
+    }
+}
+@media (max-width:640px){
+    .container{
+        width:80%;
+    }
+
+    .banner-info {
+        padding: 5em 0 7em;
+    }
+    .banner-info h1 {
+        font-size: 2.3em;
+        width: 100%;
+    }
+    .banner-info p {
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+}
+@media (max-width:480px){
+    .container{
+        width:80%;
+    }
+    .banner-info {
+        padding: 3em 0 4em;
+    }
+    .banner-info h1 {
+        font-size: 1.7em;
+        width: 100%;
+    }
+    .banner-info p {
+        width: 100%;
+        font-size: 0.875em;
+    }
+
+}
+@media (max-width:320px){
+    .container{
+        width:90%;
+    }
+    .banner-info {
+        padding: 2em 0 3em;
+    }
+    .banner-info h1 {
+        font-size: 1.2em;
+        width: 100%;
+    }
+    .banner-info p {
+        width: 100%;
+        font-size: 0.875em;
+    }
+
+}
+
+
+/*-----------------------------header index--------------------------------*/
+
+.header-index {
+    margin-bottom: 0;
+    background-color: transparent;
+    z-index: 1000;
+    border: 0;
+    padding: 20px 15px;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .header-index {
+        background-color: rgba(0,0,0,.1);
+       
+    }
+    .header-index li.active a {
+        color: #424F5A !important;
+    }
+}
+.header-index li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+.header-index li a:hover, .navbar-nav li.active a {
+    color: #009688 !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+.header-index .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+/*---------------------------------------------------------------------*/
+.btn {
+    border: 0;
+    text-decoration: none;
+    transition: background-color .2s ease, box-shadow .28s cubic-bezier(.4, 0, .2, 1) !important;
+    outline: none !important;
+}
+
+a, a:hover, a:focus {
+    color: #009688;
+    text-decoration: none;
+}
+
+.btn-primary:not(.btn-link):not(.btn-flat) {
+    background-color: #009688;
+    color: rgba(255, 255, 255, .84);
+}
+
+
+.btn-primary:hover:not(.btn-link):not(.btn-flat) {
+    background-color: #00aa9a;
+}
+
+.navbar .btn-link:hover, .navbar .btn-link:focus {
+    color: inherit;
+}
+
+.navbar .btn-link[disabled]:hover, fieldset[disabled] .navbar .btn-link:hover, .navbar .btn-link[disabled]:focus, fieldset[disabled] .navbar .btn-link:focus {
+    color: inherit;
+}
+
+/*-------------------------botones de registro y sesion-------------------------*/
+
+.btn-border {
+  border: 1px solid #009688;
+  color: #eee;
+}
+.btn-border:hover,
+.btn-border:active {
+  color: #ffffff;
+  background: #009688;
+}
+
+/*------------------------------------scroll top------------------------------*/
+
+.scroll-top {
+  right: 30px;
+  bottom: 30px;
+  background: #000;
+  border-radius: 4px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  text-align: center;
+  /*z-index: 9999;*/
+  position: fixed;
+  display: none;
+
+}
+.scroll-top i {
+  padding: 0px 10px;
+  font-size: 36px;
+  color: #009688;
+}
+.scroll-top i:hover {
+  color: #0bafa0;
+}
